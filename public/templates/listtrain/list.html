@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-12 col-md-1" ng-repeat="project in projects  | orderBy:orderBy | filter:searchText">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">
+                    <a ng-href="#/edit/[[project.$id]]">
+                        <i aria-hidden="true" class="fa fa-subway"></i> [[project.routeTag]]
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>

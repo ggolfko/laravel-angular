@@ -1,0 +1,42 @@
+<div ng-repeat="message in messages">
+    <div class="rad-list-group-item left" ng-if="message.level != 'admin'">
+        <span class="rad-list-icon pull-left">
+            <img alt="me" class="rad-list-img" ng-src="[[message.pic]]"/>
+        </span>
+        <div class="rad-list-content rad-chat">
+            <span class="lg-text">
+                [[message.nameUser]]
+            </span>
+            <span class="sm-text">
+                <i class="fa fa-clock-o">
+                </i>
+                [[message.date]]
+                <a class="fa fa-close" ng-click="messages.$remove(message)">
+                </a>
+            </span>
+            <div class="rad-chat-msg">
+                [[message.name]]
+            </div>
+        </div>
+    </div>
+    <div class="rad-list-group-item right" ng-if="message.level == 'admin'">
+        <span class="rad-list-icon pull-right">
+            <img alt="sathish" class="rad-list-img" ng-src="[[message.pic]]"/>
+        </span>
+        <div class="rad-list-content rad-chat">
+            <span class="lg-text">
+                [[message.nameUser]]
+            </span>
+            <span class="sm-text">
+                <i class="fa fa-clock-o">
+                </i>
+                [[message.date]]
+                <a class="fa fa-close" ng-click="messages.$remove(message)">
+                </a>
+            </span>
+            <div class="rad-chat-msg">
+                [[message.name]]
+            </div>
+        </div>
+    </div>
+</div>

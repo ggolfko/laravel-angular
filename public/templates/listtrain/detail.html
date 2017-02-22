@@ -1,0 +1,147 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-body">
+            <form role="form" name="myForm">
+                <div class="form-group">
+                    <label class="control-label">type</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">type</span>
+                        <input type="text" class="form-control" name="type" ng-model="project.type" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">routeTag</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">routeTag</span>
+                        <input type="text" class="form-control" name="routeTag" ng-model="project.routeTag" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">origin</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">origin</span>
+                        <input type="text" class="form-control" name="origin" ng-model="project.origin" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">depTime</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">depTime</span>
+                        <input type="text" class="form-control" name="depTime" ng-model="project.depTime" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">desti</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">desti</span>
+                        <input type="text" class="form-control" name="desti" ng-model="project.desti" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">arrTime</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">arrTime</span>
+                        <input type="text" class="form-control" name="arrTime" ng-model="project.arrTime" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">line</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">line</span>
+                        <input type="text" class="form-control" name="line" ng-model="project.line" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">travel</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">travel</span>
+                        <input type="text" class="form-control" name="travel" ng-model="project.travel" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">detail</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">detail</span>
+                        <input type="text" class="form-control" name="detail" ng-model="project.detail" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">subStation</label>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                nameStation
+                            </div>
+                            <div class="col-xs-3">
+                                depTime
+                            </div>
+                            <div class="col-xs-3">
+                                arrTime
+                            </div>
+                        </div>
+                        <div ng-repeat=" sub in project.subStation" class="">
+                            <div ng-show="sub.l10n == 'th'">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">[[sub.id]]</span>
+                                            <input type="text" class="form-control" name="sub.nameStation" ng-model="sub.nameStation">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="text" class="form-control" name="sub.depTime" ng-model="sub.depTime">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="text" class="form-control" name="sub.arrTime" ng-model="sub.arrTime">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                         <div class="col-xs-6">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                nameStation
+                            </div>
+                            <div class="col-xs-3">
+                                depTime
+                            </div>
+                            <div class="col-xs-3">
+                                arrTime
+                            </div>
+                        </div>
+                        <div ng-repeat=" sub in project.subStation" class="">
+                            <div ng-show="sub.l10n == 'en'">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">[[sub.id]]</span>
+                                            <input type="text" class="form-control" name="sub.nameStation" ng-model="sub.nameStation">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="text" class="form-control" name="sub.depTime" ng-model="sub.depTime">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="text" class="form-control" name="sub.arrTime" ng-model="sub.arrTime">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+    <div class="control-group">
+        <label>Heading</label>
+        <textarea name="status" class="form-control" rows="3" ng-model="project.status"></textarea>
+    </div>-->
+                <br>
+                <a href="#/" class="btn btn-info">Cancel</a>
+                <button ng-click="save()" ng-disabled="myForm.$invalid" class="btn btn-primary">Save</button>
+                <button ng-click="destroy()" ng-show="project.$id" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>

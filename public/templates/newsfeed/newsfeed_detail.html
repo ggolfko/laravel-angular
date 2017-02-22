@@ -1,0 +1,59 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-body">
+            <form role="form" name="myForm">
+                <div class="form-group">
+                    <label class="control-label">avTar</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">avTar</span>
+                        <input type="text" class="form-control" name="avTar" ng-model="project.avTar" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">dateTime</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">dateTime</span>
+                        <input type="text" class="form-control" name="dateTime" ng-model="project.dateTime" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">deScri</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">deScri</span>
+                        <input type="text" class="form-control" name="deScri" ng-model="project.deScri" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">toPic</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">toPic</span>
+                        <input type="text" class="form-control" name="toPic" ng-model="project.toPic" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">uRl</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">uRl</span>
+                        <input type="text" class="form-control" name="uRl" ng-model="project.uRl" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">vIew</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">vIew</span>
+                        <input type="text" class="form-control" name="vIew" ng-model="project.vIew" required>
+                    </div>
+                </div>
+                <!--
+    <div class="control-group">
+        <label>Heading</label>
+        <textarea name="status" class="form-control" rows="3" ng-model="project.status"></textarea>
+    </div>-->
+                <br>
+                <a href="#/" class="btn btn-info">Cancel</a>
+                <button ng-click="save()" ng-disabled="myForm.$invalid" class="btn btn-primary">Save</button>
+                <button ng-click="destroy()" ng-show="project.$id" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
